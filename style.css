@@ -22,8 +22,20 @@ body {
   transition: transform 1s;
 }
 
+.container.none {
+  display: none;
+}
+
+.container.bounce {
+  animation: 1s forwards bounce
+}
+
 .container.scale {
   transform: scale(1);
+}
+
+.container.scaledown {
+  transform: scale(0)
 }
 
 .title {
@@ -34,16 +46,6 @@ body {
 
 .heart {
   animation: .25s infinite alternate beat
-}
-
-@keyframes beat {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.15);
-  }
 }
 
 button {
@@ -63,4 +65,28 @@ button {
 .no {
   background-color: rgb(255, 99, 71);
   box-shadow: 3px 3px 0 rgb(139, 53, 38);
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
 }

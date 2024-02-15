@@ -1,8 +1,9 @@
 /** Container element */
 const container = document.querySelector(".container");
-document.addEventListener("DOMContentLoaded", () => {
-  container.classList.toggle("scale");
-});
+const finalContainer = document.querySelector(".container.none");
+// document.addEventListener("DOMContentLoaded", () => {
+//   container.classList.toggle("scale");
+// });
 
 /** Title container element */
 const title = document.querySelector(".title");
@@ -101,17 +102,18 @@ const moveButton = () => {
 };
 
 const finish = () => {
-  container.classList.toggle("scale");
-  setTimeout(() => {
-    noButton.style.display = "none";
-    yesButton.style.display = "none";
-    title.innerHTML = "Happy Valentine's Day!";
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
-    container.appendChild(heart);
-    container.classList.toggle("scale");
-  }, 1000);
+  container.classList.toggle("none");
+  // setTimeout(() => {
+  finalContainer.classList.toggle("none");
+  // noButton.style.display = "none";
+  // yesButton.style.display = "none";
+  // title.innerHTML = "Happy Valentine's Day!";
+  // const heart = document.createElement("div");
+  // heart.classList.add("heart");
+  // heart.innerHTML = "❤️";
+  // container.appendChild(heart);
+  finalContainer.classList.toggle("bounce");
+  // }, 1000);
 };
 
 yesButton.addEventListener("click", finish);
