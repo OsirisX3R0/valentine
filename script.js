@@ -119,4 +119,4 @@ const finish = () => {
 yesButton.addEventListener("click", finish);
 noButton.addEventListener("mouseover", moveButton);
 noButton.addEventListener("click", moveButton);
-noButton.addEventListener("touch", moveButton);
+noButton.addEventListener("touchstart", moveButton);
